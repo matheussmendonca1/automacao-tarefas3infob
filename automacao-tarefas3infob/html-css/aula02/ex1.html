@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <link rel="stylesheet" href="ex2.css">
+</head>
+<body>
+    <h1>Cadastro de notas</h1>
+    <hr>
+
+    <form action="ex1.html" method="POST">
+
+        <div>
+            <label for="idnome">Nome</label> <br>
+            <input class="campos" type="text" name="nome" id="idnome">
+        </div>
+
+        <div>
+            <label for="idnota">Nota</label> <br>
+            <input class="campos" type="number" name="nota" id="idnota">
+        </div>
+
+        <input id="salvar" type="submit" value="Salvar">
+
+    </form>
+
+    <table id="tabela-notas">
+        <thead>
+            <tr>
+                <td class="nome">Nome</td>
+                <td class="nota">Nota</td>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr class="tr">
+
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <script src="ex1.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução sobre HTML</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            font-family: 'Montserrat', 'Arial';
+        }
+        
+        body {
+            height: 100vh;
+
+            background: linear-gradient(#6ed88e, #2eacf5);
+
+        }
+
+        main {
+            width: 40%;
+            height: 90vh;
+
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+
+            padding: 20px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            box-shadow: 5px 5px 10px #074fa160;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 300px;
+        }
+
+        thead {
+            font-weight: bold;
+        }
+
+        td {
+            border: 1px solid #000000;
+            padding: 5px;
+        }
+        
+        a {
+            display: block;
+            width: 200px;
+
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+
+            background-color: #9565ee;
+            color: #ffffff;
+            box-shadow: 2px 2px 8px #858181;
+
+            transition: .3s;
+        }
+
+        a:hover {
+            border-radius: 18px;
+            background-color: #7c3ef0;
+            
+            transform: translate(20px);
+
+            text-decoration: underline;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Introdução ao HTML</h1>
+        <p>A HTML é uma linguagem de marcação de hipertexto, ela informa ao navegador que um texto deve ser apresentado de uma forma diferente, como por exemplo.</p>
+        <p>Parágrafo</p>
+        <p>Tabela</p>
+        <table>
+            <thead>
+                <tr>
+                    <td>Nome</td>
+                    <td>Sobrenome</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Matheus</td>
+                    <td>Mendonça</td>
+                </tr>
+                <tr><td>Pablo</td>
+                    <td>Marçal</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Imagem <img src="../../aula10-form/comite.png" alt=""></p> <br>
+        <p>Vídeo <video src=""></video></p> <br>
+        <a href="https://youtube.com/linkinpark" target="_blank">Links</a> <br>
+        <p>Para fazer as marcações utilizamos tag (etiquetas) que indicam o início e o fim de uma marcação (elemento).</p>
+    </main>
+</body>
+</html>
