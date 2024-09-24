@@ -15,6 +15,7 @@ h1 {
 }
 
 form {
+    display: inline-block;
     border: 1px solid black;
     width: 50vw;
 }
@@ -64,4 +65,17 @@ input[type="submit"] {
 .campos {
     width: 50%;
     padding: 5px;
+}
+
+.foto-delmo {
+    display: block;
+    position: absolute;
+
+    top: 30%;
+    left: 80%;
+    transform: translate(-65%, -20%);
+}
+
+img {
+    width: 30vw;
 }

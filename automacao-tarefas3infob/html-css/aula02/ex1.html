@@ -10,21 +10,22 @@
     <h1>Cadastro de notas</h1>
     <hr>
 
-    <form action="ex1.html" method="POST">
-
-        <div>
-            <label for="idnome">Nome</label> <br>
-            <input class="campos" type="text" name="nome" id="idnome">
+    <div>
+        <form action="ex1.html" method="POST">
+            <div>
+                <label for="idnome">Nome</label> <br>
+                <input class="campos" type="text" name="nome" id="idnome">
+            </div>
+            <div>
+                <label for="idnota">Nota</label> <br>
+                <input class="campos" type="number" name="nota" id="idnota">
+            </div>
+            <input id="salvar" type="submit" value="Salvar">
+        </form>
+        <div class="foto-delmo">
+            <img src="img.png" alt="imagem">
         </div>
-
-        <div>
-            <label for="idnota">Nota</label> <br>
-            <input class="campos" type="number" name="nota" id="idnota">
-        </div>
-
-        <input id="salvar" type="submit" value="Salvar">
-
-    </form>
+    </div>
 
     <table id="tabela-notas">
         <thead>
@@ -41,6 +42,9 @@
             
         </tbody>
     </table>
+
+
+    
 
     <script src="ex1.js"></script>
 </body>
