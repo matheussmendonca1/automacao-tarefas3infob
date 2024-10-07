@@ -20,9 +20,15 @@ form {
     width: 50vw;
 }
 
+span {
+    font-size: 5pt;
+}
+
 table {
     width: 50vw;
     border-collapse: collapse;
+
+    margin-left: 20px;
 }
 
 thead {
