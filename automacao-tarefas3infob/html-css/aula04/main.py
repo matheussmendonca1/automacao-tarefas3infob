@@ -9,34 +9,34 @@ import wget
 planilha = pd.DataFrame(columns=['Numero', 'Nome', 'Altura', 'Imagem'])
 
 # criar um objeto para manipular o navegador
-chrome = webdriver.Chrome()
+navegador = webdriver.Firefox()
 
-# abrir uma página no Chrome
+# abrir uma página no navegador
 
 contador = 0
-chrome.get("https://sg.portal-pokemon.com/play/pokedex/0001")
+navegador.get("https://sg.portal-pokemon.com/play/pokedex/0001")
 
 while contador < 10:
 
     # procurar pelo elemento que possui o codigo do pokemon
-    elementNumero = chrome.find_element(By.CLASS_NAME, 'pokemon-slider__main-no')
+    elementNumero = navegador.find_element(By.CLASS_NAME, 'pokemon-slider__main-no')
 
     # procurar pelo elemento que possui o nome do pokemon
-    elementNome = chrome.find_element(By.CLASS_NAME, 'pokemon-slider__main-name')
+    elementNome = navegador.find_element(By.CLASS_NAME, 'pokemon-slider__main-name')
 
     # procura pela altura do pokemon
-    elementAltura = chrome.find_element(By.CSS_SELECTOR, '.pokemon-info__height .pokemon-info__value')
+    elementAltura = navegador.find_element(By.CSS_SELECTOR, '.pokemon-info__height .pokemon-info__value')
 
     # procurar pela imagem
-    elementImage = chrome.find_element(By.CLASS_NAME, "pokemon-img__front")
+    elementImage = navegador.find_element(By.CLASS_NAME, "pokemon-img__front")
     endercoImage = elementImage.get_attribute('src')
 
     # cria um novo nome para a imagem
-    urlNavegador = chrome.current_url
+    urlNavegador = navegador.current_url
     numeroPokemonVersao = urlNavegador.split('/')[-1]
     extensaoImg = endercoImage.split('.')[-1]
     nomeImagem = numeroPokemonVersao + "." + extensaoImg
-    ondeSalvar = "aula04\\img\\" + nomeImagem
+    ondeSalvar = "./img/" + nomeImagem
 
     wget.download(endercoImage, ondeSalvar)
 
@@ -48,8 +48,8 @@ while contador < 10:
     planilha.loc[contador] = [elementNumero.text, elementNome.text,  elementAltura.text, nomeImagem]
 
     # seleciona o botao para o proximo pokemon
-    btnNext = chrome.find_element(By.CSS_SELECTOR, ".pokemon-slider__wrapper--right >  a")
-    chrome.execute_script('arguments[0].click()', btnNext)
+    btnNext = navegador.find_element(By.CSS_SELECTOR, ".pokemon-slider__wrapper--right > a")
+    navegador.execute_script('arguments[0].click()', btnNext)
     
     contador += 1
 
